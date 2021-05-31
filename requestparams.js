@@ -33,6 +33,11 @@ app.post("/id", (req, res) => {
   });
 });
 
+// Named parameter time!
+app.get("/user/:name", (req, res) => {
+  res.send(req.params.name.toLocaleUpperCase());
+});
+
 app.listen(PORT, () =>
   console.log(`Server is up and listening on port ${PORT}`)
 );
